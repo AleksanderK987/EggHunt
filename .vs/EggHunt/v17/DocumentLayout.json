@@ -3,8 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\aleks\\source\\repos\\EggHunt\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{378FA0A5-A47F-4628-81D9-7F47921B2ABE}|EggHunt\\EggHunt.csproj|c:\\users\\aleks\\source\\repos\\egghunt\\egghunt\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{378FA0A5-A47F-4628-81D9-7F47921B2ABE}|EggHunt\\EggHunt.csproj|c:\\users\\aleks\\source\\repos\\egghunt\\egghunt\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{378FA0A5-A47F-4628-81D9-7F47921B2ABE}|EggHunt\\EggHunt.csproj|solutionrelative:egghunt\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{378FA0A5-A47F-4628-81D9-7F47921B2ABE}|EggHunt\\EggHunt.csproj|C:\\Users\\aleks\\source\\repos\\EggHunt\\egghunt\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{378FA0A5-A47F-4628-81D9-7F47921B2ABE}|EggHunt\\EggHunt.csproj|solutionrelative:egghunt\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{378FA0A5-A47F-4628-81D9-7F47921B2ABE}|EggHunt\\EggHunt.csproj|c:\\users\\aleks\\source\\repos\\egghunt\\egghunt\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{378FA0A5-A47F-4628-81D9-7F47921B2ABE}|EggHunt\\EggHunt.csproj|solutionrelative:egghunt\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{378FA0A5-A47F-4628-81D9-7F47921B2ABE}|EggHunt\\EggHunt.csproj|c:\\users\\aleks\\source\\repos\\egghunt\\egghunt\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{378FA0A5-A47F-4628-81D9-7F47921B2ABE}|EggHunt\\EggHunt.csproj|solutionrelative:egghunt\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{378FA0A5-A47F-4628-81D9-7F47921B2ABE}|EggHunt\\EggHunt.csproj|c:\\users\\aleks\\source\\repos\\egghunt\\egghunt\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{378FA0A5-A47F-4628-81D9-7F47921B2ABE}|EggHunt\\EggHunt.csproj|solutionrelative:egghunt\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{378FA0A5-A47F-4628-81D9-7F47921B2ABE}|EggHunt\\EggHunt.csproj|c:\\users\\aleks\\source\\repos\\egghunt\\egghunt\\form1.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
+      "RelativeMoniker": "D:0:0:{378FA0A5-A47F-4628-81D9-7F47921B2ABE}|EggHunt\\EggHunt.csproj|solutionrelative:egghunt\\form1.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,11 +34,74 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Form1.resx",
+              "DocumentMoniker": "C:\\Users\\aleks\\source\\repos\\EggHunt\\EggHunt\\Form1.resx",
+              "RelativeDocumentMoniker": "EggHunt\\Form1.resx",
+              "ToolTip": "C:\\Users\\aleks\\source\\repos\\EggHunt\\EggHunt\\Form1.resx",
+              "RelativeToolTip": "EggHunt\\Form1.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2024-05-18T15:24:50.037Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Menu.cs [Projekt]",
+              "DocumentMoniker": "C:\\Users\\aleks\\source\\repos\\EggHunt\\EggHunt\\Menu.cs",
+              "RelativeDocumentMoniker": "EggHunt\\Menu.cs",
+              "ToolTip": "C:\\Users\\aleks\\source\\repos\\EggHunt\\EggHunt\\Menu.cs [Projekt]",
+              "RelativeToolTip": "EggHunt\\Menu.cs [Projekt]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-18T15:24:23.486Z",
+              "EditorCaption": " [Projekt]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\aleks\\source\\repos\\EggHunt\\EggHunt\\Program.cs",
+              "RelativeDocumentMoniker": "EggHunt\\Program.cs",
+              "ToolTip": "C:\\Users\\aleks\\source\\repos\\EggHunt\\EggHunt\\Program.cs",
+              "RelativeToolTip": "EggHunt\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-18T15:04:32.516Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\aleks\\source\\repos\\EggHunt\\EggHunt\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "EggHunt\\Form1.Designer.cs",
+              "ToolTip": "C:\\Users\\aleks\\source\\repos\\EggHunt\\EggHunt\\Form1.Designer.cs",
+              "RelativeToolTip": "EggHunt\\Form1.Designer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-18T13:00:58.885Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\aleks\\source\\repos\\EggHunt\\EggHunt\\Form1.cs",
+              "RelativeDocumentMoniker": "EggHunt\\Form1.cs",
+              "ToolTip": "C:\\Users\\aleks\\source\\repos\\EggHunt\\EggHunt\\Form1.cs",
+              "RelativeToolTip": "EggHunt\\Form1.cs",
+              "ViewState": "AQIAACkAAAAAAAAAAAAuwDkAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-18T13:10:57.141Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Form1.cs [Projekt]",
               "DocumentMoniker": "C:\\Users\\aleks\\source\\repos\\EggHunt\\EggHunt\\Form1.cs",
               "RelativeDocumentMoniker": "EggHunt\\Form1.cs",
@@ -27,10 +110,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-18T12:40:56.095Z",
               "EditorCaption": " [Projekt]"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             }
           ]
         }
