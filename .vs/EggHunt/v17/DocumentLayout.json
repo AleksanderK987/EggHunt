@@ -1,0 +1,40 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\aleks\\source\\repos\\EggHunt\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{378FA0A5-A47F-4628-81D9-7F47921B2ABE}|EggHunt\\EggHunt.csproj|c:\\users\\aleks\\source\\repos\\egghunt\\egghunt\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{378FA0A5-A47F-4628-81D9-7F47921B2ABE}|EggHunt\\EggHunt.csproj|solutionrelative:egghunt\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs [Projekt]",
+              "DocumentMoniker": "C:\\Users\\aleks\\source\\repos\\EggHunt\\EggHunt\\Form1.cs",
+              "RelativeDocumentMoniker": "EggHunt\\Form1.cs",
+              "ToolTip": "C:\\Users\\aleks\\source\\repos\\EggHunt\\EggHunt\\Form1.cs [Projekt]",
+              "RelativeToolTip": "EggHunt\\Form1.cs [Projekt]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-18T12:40:56.095Z",
+              "EditorCaption": " [Projekt]"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
