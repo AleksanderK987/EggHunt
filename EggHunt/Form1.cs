@@ -12,6 +12,13 @@ namespace EggHunt
 
         }
 
+        public string SelectedDifficulty { get; set; }
+        public Form1(string difficulty)
+        {
+            InitializeComponent();
+            SelectedDifficulty = difficulty;
+        }
+
         private void Basket_Click(object sender, EventArgs e)
         {
 
@@ -45,9 +52,14 @@ namespace EggHunt
         }
 
         Random random = new Random();
-        int pts = 0,hp = 3;
+        int pts = 0, hp = 3;
+        bool isGameOver = false;
+
         void falldown(PictureBox egg)
         {
+            //if (isGameOver) return;
+            //MessageBox.Show("Falldown called");
+
             if (egg.Top <= this.Height)
             {
                 egg.Top += 3;
@@ -57,6 +69,14 @@ namespace EggHunt
                 egg.Location = new Point(random.Next(300, 900), 0);
                 hp--;
                 Health.Text = "Health: " + hp.ToString();
+                if (hp <= 0 && !isGameOver) //added "!isGameOver" to prevent opening new Menu forms (it was annoying)
+                {
+                    isGameOver = true;
+                    timer1.Stop();
+                    Menu menu = new Menu();
+                    menu.Show();
+                    this.Close();
+                }
             }
 
             if (egg.Bounds.IntersectsWith(Basket.Bounds))

@@ -28,40 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            easy = new Button();
-            medium = new Button();
-            hard = new Button();
+            play = new Button();
             Title = new Label();
             highScoreTitle = new Label();
             richTextBox1 = new RichTextBox();
+            difficulty = new ComboBox();
+            exit = new Button();
             SuspendLayout();
             // 
-            // easy
+            // play
             // 
-            easy.Location = new Point(12, 82);
-            easy.Name = "easy";
-            easy.Size = new Size(189, 51);
-            easy.TabIndex = 0;
-            easy.Text = "Easy";
-            easy.UseVisualStyleBackColor = true;
-            // 
-            // medium
-            // 
-            medium.Location = new Point(12, 139);
-            medium.Name = "medium";
-            medium.Size = new Size(189, 51);
-            medium.TabIndex = 1;
-            medium.Text = "Medium";
-            medium.UseVisualStyleBackColor = true;
-            // 
-            // hard
-            // 
-            hard.Location = new Point(12, 197);
-            hard.Name = "hard";
-            hard.Size = new Size(189, 51);
-            hard.TabIndex = 2;
-            hard.Text = "Hard";
-            hard.UseVisualStyleBackColor = true;
+            play.Location = new Point(12, 111);
+            play.Name = "play";
+            play.Size = new Size(195, 51);
+            play.TabIndex = 0;
+            play.Text = "Play";
+            play.UseVisualStyleBackColor = true;
+            play.Click += play_Click;
             // 
             // Title
             // 
@@ -77,7 +60,7 @@
             // 
             highScoreTitle.AutoSize = true;
             highScoreTitle.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            highScoreTitle.Location = new Point(295, 51);
+            highScoreTitle.Location = new Point(292, 38);
             highScoreTitle.Name = "highScoreTitle";
             highScoreTitle.Size = new Size(112, 28);
             highScoreTitle.TabIndex = 4;
@@ -91,17 +74,37 @@
             richTextBox1.TabIndex = 5;
             richTextBox1.Text = "";
             // 
+            // difficulty
+            // 
+            difficulty.FormattingEnabled = true;
+            difficulty.Items.AddRange(new object[] { "Easy", "Medium", "Hard" });
+            difficulty.Location = new Point(54, 82);
+            difficulty.Name = "difficulty";
+            difficulty.Size = new Size(121, 23);
+            difficulty.TabIndex = 6;
+            difficulty.SelectedIndexChanged += difficulty_SelectedIndexChanged;
+            // 
+            // exit
+            // 
+            exit.Location = new Point(12, 168);
+            exit.Name = "exit";
+            exit.Size = new Size(195, 51);
+            exit.TabIndex = 7;
+            exit.Text = "Exit";
+            exit.UseVisualStyleBackColor = true;
+            exit.Click += exit_Click;
+            // 
             // Menu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(482, 284);
+            Controls.Add(exit);
+            Controls.Add(difficulty);
             Controls.Add(richTextBox1);
             Controls.Add(highScoreTitle);
             Controls.Add(Title);
-            Controls.Add(hard);
-            Controls.Add(medium);
-            Controls.Add(easy);
+            Controls.Add(play);
             Name = "Menu";
             Text = "prze";
             ResumeLayout(false);
@@ -110,11 +113,11 @@
 
         #endregion
 
-        private Button easy;
-        private Button medium;
-        private Button hard;
+        private Button play;
         private Label Title;
         private Label highScoreTitle;
         private RichTextBox richTextBox1;
+        private ComboBox difficulty;
+        private Button exit;
     }
 }

@@ -16,3 +16,4 @@ C:\Users\aleks\source\repos\EggHunt\EggHunt\obj\Debug\net6.0-windows\refint\EggH
 C:\Users\aleks\source\repos\EggHunt\EggHunt\obj\Debug\net6.0-windows\EggHunt.pdb
 C:\Users\aleks\source\repos\EggHunt\EggHunt\obj\Debug\net6.0-windows\EggHunt.genruntimeconfig.cache
 C:\Users\aleks\source\repos\EggHunt\EggHunt\obj\Debug\net6.0-windows\ref\EggHunt.dll
+C:\Users\aleks\source\repos\EggHunt\EggHunt\obj\Debug\net6.0-windows\EggHunt.Menu.resources
