@@ -1,3 +1,7 @@
+using System.Xml;
+using System.Xml.Serialization;
+using static System.Formats.Asn1.AsnWriter;
+
 namespace EggHunt
 {
     public partial class Form1 : Form
@@ -12,6 +16,7 @@ namespace EggHunt
 
         }
 
+        //retrieving the selected difficulty level 
         public string SelectedDifficulty { get; set; }
         public Form1(string difficulty)
         {
@@ -39,15 +44,16 @@ namespace EggHunt
 
         }
 
+        //basket moves
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Left)
             {
-                Basket.Left += -10;
+                Basket.Left += -8;
             }
             if (e.KeyCode == Keys.Right)
             {
-                Basket.Left += 10;
+                Basket.Left += 8;
             }
         }
 
@@ -57,12 +63,9 @@ namespace EggHunt
 
         void falldown(PictureBox egg)
         {
-            //if (isGameOver) return;
-            //MessageBox.Show("Falldown called");
-
             if (egg.Top <= this.Height)
             {
-                egg.Top += 3;
+                egg.Top += 4;
             }
             else if (egg.Top > this.Height)
             {
@@ -71,6 +74,7 @@ namespace EggHunt
                 Health.Text = "Health: " + hp.ToString();
                 if (hp <= 0 && !isGameOver) //added "!isGameOver" to prevent opening new Menu forms (it was annoying)
                 {
+                    AddScore();
                     isGameOver = true;
                     timer1.Stop();
                     Menu menu = new Menu();
@@ -84,6 +88,31 @@ namespace EggHunt
                 egg.Location = new Point(random.Next(300, 900), 0);
                 pts++;
                 Points.Text = "Points: " + pts.ToString();
+            }
+        }
+
+        void AddScore()
+        {
+            const string filePath = "highscores.xml";
+
+            if (File.Exists(filePath))
+            {
+                XmlDocument doc = new XmlDocument();
+                doc.Load(filePath);
+
+                //downloading the existing root
+                XmlElement root = doc.DocumentElement;
+
+                //saving new score to XML file
+                if (pts>0) 
+                { 
+                    XmlElement scoreElement = doc.CreateElement("Score");
+                    scoreElement.InnerText = pts.ToString();
+                    root.AppendChild(scoreElement);
+                }
+
+                //Saving doc
+                doc.Save(filePath);
             }
         }
 

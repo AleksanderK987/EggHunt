@@ -58,7 +58,7 @@
             Egg.BackColor = Color.Transparent;
             Egg.BackgroundImageLayout = ImageLayout.None;
             Egg.Image = (Image)resources.GetObject("Egg.Image");
-            Egg.Location = new Point(388, 92);
+            Egg.Location = new Point(788, 9);
             Egg.Name = "Egg";
             Egg.Size = new Size(86, 98);
             Egg.SizeMode = PictureBoxSizeMode.StretchImage;

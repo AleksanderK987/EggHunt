@@ -31,14 +31,14 @@
             play = new Button();
             Title = new Label();
             highScoreTitle = new Label();
-            richTextBox1 = new RichTextBox();
+            highscores = new RichTextBox();
             difficulty = new ComboBox();
             exit = new Button();
             SuspendLayout();
             // 
             // play
             // 
-            play.Location = new Point(12, 111);
+            play.Location = new Point(12, 83);
             play.Name = "play";
             play.Size = new Size(195, 51);
             play.TabIndex = 0;
@@ -50,7 +50,7 @@
             // 
             Title.AutoSize = true;
             Title.Font = new Font("SimSun-ExtB", 36F, FontStyle.Bold, GraphicsUnit.Point);
-            Title.Location = new Point(12, 18);
+            Title.Location = new Point(12, 20);
             Title.Name = "Title";
             Title.Size = new Size(195, 48);
             Title.TabIndex = 3;
@@ -60,25 +60,27 @@
             // 
             highScoreTitle.AutoSize = true;
             highScoreTitle.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            highScoreTitle.Location = new Point(292, 38);
+            highScoreTitle.Location = new Point(240, 40);
             highScoreTitle.Name = "highScoreTitle";
             highScoreTitle.Size = new Size(112, 28);
             highScoreTitle.TabIndex = 4;
             highScoreTitle.Text = "Highscores:";
             // 
-            // richTextBox1
+            // highscores
             // 
-            richTextBox1.Location = new Point(240, 82);
-            richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(210, 166);
-            richTextBox1.TabIndex = 5;
-            richTextBox1.Text = "";
+            highscores.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            highscores.Location = new Point(240, 83);
+            highscores.Name = "highscores";
+            highscores.Size = new Size(112, 137);
+            highscores.TabIndex = 5;
+            highscores.Text = "";
+            highscores.TextChanged += highscores_TextChanged;
             // 
             // difficulty
             // 
             difficulty.FormattingEnabled = true;
             difficulty.Items.AddRange(new object[] { "Easy", "Medium", "Hard" });
-            difficulty.Location = new Point(54, 82);
+            difficulty.Location = new Point(48, 140);
             difficulty.Name = "difficulty";
             difficulty.Size = new Size(121, 23);
             difficulty.TabIndex = 6;
@@ -86,7 +88,7 @@
             // 
             // exit
             // 
-            exit.Location = new Point(12, 168);
+            exit.Location = new Point(12, 169);
             exit.Name = "exit";
             exit.Size = new Size(195, 51);
             exit.TabIndex = 7;
@@ -98,10 +100,10 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(482, 284);
+            ClientSize = new Size(371, 235);
             Controls.Add(exit);
             Controls.Add(difficulty);
-            Controls.Add(richTextBox1);
+            Controls.Add(highscores);
             Controls.Add(highScoreTitle);
             Controls.Add(Title);
             Controls.Add(play);
@@ -116,7 +118,7 @@
         private Button play;
         private Label Title;
         private Label highScoreTitle;
-        private RichTextBox richTextBox1;
+        private RichTextBox highscores;
         private ComboBox difficulty;
         private Button exit;
     }
