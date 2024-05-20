@@ -18,9 +18,8 @@ namespace EggHunt
 
         //retrieving the selected difficulty level 
         public string SelectedDifficulty { get; set; }
-        public Form1(string difficulty)
+        public Form1(string difficulty) : this()
         {
-            InitializeComponent();
             SelectedDifficulty = difficulty;
         }
 
@@ -58,14 +57,27 @@ namespace EggHunt
         }
 
         Random random = new Random();
-        int pts = 0, hp = 3;
+        int pts = 0, hp = 3, fallSpeed = 4;
         bool isGameOver = false;
 
         void falldown(PictureBox egg)
         {
+            switch (SelectedDifficulty)
+            {
+                case "0":
+                    fallSpeed = 3;
+                    break;
+                case "1":
+                    fallSpeed = 4;
+                    break;
+                case "2":
+                    fallSpeed = 5;
+                    break;
+            }
+
             if (egg.Top <= this.Height)
             {
-                egg.Top += 4;
+                egg.Top += fallSpeed;
             }
             else if (egg.Top > this.Height)
             {
@@ -74,12 +86,7 @@ namespace EggHunt
                 Health.Text = "Health: " + hp.ToString();
                 if (hp <= 0 && !isGameOver) //added "!isGameOver" to prevent opening new Menu forms (it was annoying)
                 {
-                    AddScore();
-                    isGameOver = true;
-                    timer1.Stop();
-                    Menu menu = new Menu();
-                    menu.Show();
-                    this.Close();
+                    EndGame();
                 }
             }
 
@@ -88,6 +95,42 @@ namespace EggHunt
                 egg.Location = new Point(random.Next(300, 900), 0);
                 pts++;
                 Points.Text = "Points: " + pts.ToString();
+            }
+        }
+
+        void bombFalldown(PictureBox bomb)
+        {
+            switch (SelectedDifficulty)
+            {
+                case "0":
+                    fallSpeed = 3;
+                    break;
+                case "1":
+                    fallSpeed = 4;
+                    break;
+                case "2":
+                    fallSpeed = 5;
+                    break;
+            }
+
+            if (bomb.Top <= this.Height)
+            {
+                bomb.Top += fallSpeed;
+            }
+            else if (bomb.Top > this.Height)
+            {
+                bomb.Location = new Point(random.Next(300, 900), 0);
+            }
+
+            if (bomb.Bounds.IntersectsWith(Basket.Bounds))
+            {
+                bomb.Location = new Point(random.Next(300, 900), 0);
+                hp--;
+                Health.Text = "Health: " + hp.ToString();
+                if (hp <= 0 && !isGameOver) //added "!isGameOver" to prevent opening new Menu forms (it was annoying)
+                {
+                    EndGame();
+                }
             }
         }
 
@@ -104,8 +147,8 @@ namespace EggHunt
                 XmlElement root = doc.DocumentElement;
 
                 //saving new score to XML file
-                if (pts>0) 
-                { 
+                if (pts > 0)
+                {
                     XmlElement scoreElement = doc.CreateElement("Score");
                     scoreElement.InnerText = pts.ToString();
                     root.AppendChild(scoreElement);
@@ -115,10 +158,24 @@ namespace EggHunt
                 doc.Save(filePath);
             }
         }
-
+        
+        void EndGame()
+        {
+            AddScore();
+            isGameOver = true;
+            timer1.Stop();
+            Menu menu = new Menu();
+            menu.Show();
+            this.Close();
+        }
         private void timer1_Tick(object sender, EventArgs e)
         {
             falldown(Egg);
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            bombFalldown(Bomb);
         }
     }
 }

@@ -109,6 +109,7 @@
             Controls.Add(play);
             Name = "Menu";
             Text = "prze";
+            Load += Menu_Load;
             ResumeLayout(false);
             PerformLayout();
         }

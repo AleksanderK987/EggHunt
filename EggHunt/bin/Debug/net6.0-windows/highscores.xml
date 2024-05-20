@@ -1,7 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ArrayOfHighScore xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="HighScores.Scores">
-  <Score xmlns="">3</Score>
-  <Score xmlns="">1</Score>
-  <Score xmlns="">9</Score>
-  <Score xmlns="">21</Score>
+
 </ArrayOfHighScore>

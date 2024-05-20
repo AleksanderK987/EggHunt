@@ -24,8 +24,8 @@ namespace EggHunt
 
         private void play_Click(object sender, EventArgs e)
         {
-            this.Hide();
             string selectedDifficulty = difficulty.SelectedIndex.ToString();
+            this.Hide();
             Form1 form1 = new Form1(selectedDifficulty); //funfact: when sending this form without sending difficulty property, the timer in the form1 was running and calling functions all the time
             form1.ShowDialog();
         }
@@ -70,6 +70,11 @@ namespace EggHunt
             }
         }
         private void highscores_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Menu_Load(object sender, EventArgs e)
         {
 
         }
