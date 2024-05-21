@@ -1,5 +1,5 @@
 ## Simple game using forms for Uni.
-To delete the test highscore just go to:<br>
+To delete the highscore just go to:<br>
 "...\EggHunt\bin\Debug\net6.0-windows\highscores.xml"<br>
 and delete the highscore section;<br>
 
