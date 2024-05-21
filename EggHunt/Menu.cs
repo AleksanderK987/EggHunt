@@ -15,45 +15,43 @@ namespace EggHunt
 {
     public partial class Menu : Form
     {
+        [Serializable]
+        public class HighScore
+        {
+            [XmlElement("Score")]
+            public int Score { get; set; }
+            [XmlElement("Nick")]
+            public string Nick { get; set; }
+        }
+
         public Menu()
         {
             InitializeComponent();
-            difficulty.SelectedIndex = 1; //to prevent sending null to Form1
+            //to prevent sending nulls to Form1
+            difficulty.SelectedIndex = 0;
+            nickname.Text = "Guest";
             HighScores();
         }
 
         private void play_Click(object sender, EventArgs e)
         {
             string selectedDifficulty = difficulty.SelectedIndex.ToString();
+            string playerNick = nickname.Text;
             this.Hide();
-            Form1 form1 = new Form1(selectedDifficulty); //funfact: when sending this form without sending difficulty property, the timer in the form1 was running and calling functions all the time
+            Form1 form1 = new Form1(selectedDifficulty, playerNick); //funfact: when sending this form without sending difficulty property, the timer in the form1 was running and calling functions all the time
             form1.ShowDialog();
         }
 
-        private void difficulty_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void exit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        public List<int> _scores = new List<int>();
+        public List<HighScore> _scores = new List<HighScore>();
         const string filePath = "highscores.xml";
         void HighScores()
         {
-            XmlDocument doc = new XmlDocument();
-            doc.Load(filePath);
-
-            XmlNodeList scoreNodes = doc.GetElementsByTagName("Score");
-            foreach (XmlNode scoreNode in scoreNodes)
+            if (File.Exists(filePath))
             {
-                int score;
-                if (int.TryParse(scoreNode.InnerText, out score))
+                XmlSerializer serializer = new XmlSerializer(typeof(List<HighScore>));
+                using (var reader = new StreamReader(filePath))
                 {
-                    _scores.Add(score);
+                    _scores = (List<HighScore>)serializer.Deserialize(reader);
                 }
             }
             //displaying the highscores in textbox
@@ -63,12 +61,18 @@ namespace EggHunt
         void DisplayHS()
         {
             //showing the highscores from best to worse
-            _scores.Sort((x, y) => y.CompareTo(x));
+            _scores.Sort((x, y) => y.Score.CompareTo(x.Score));
             foreach (var score in _scores)
             {
-                highscores.AppendText($"Score: {score}\n");
+                highscores.AppendText(score.Nick+": "+score.Score+"\n");
             }
         }
+
+        private void difficulty_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void highscores_TextChanged(object sender, EventArgs e)
         {
 
@@ -77,6 +81,16 @@ namespace EggHunt
         private void Menu_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void nickname_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

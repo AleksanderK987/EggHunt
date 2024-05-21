@@ -31,15 +31,15 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             Basket = new PictureBox();
-            Egg = new PictureBox();
+            Egg1 = new PictureBox();
             Points = new Label();
             Health = new Label();
-            timer1 = new System.Windows.Forms.Timer(components);
-            Bomb = new PictureBox();
-            timer2 = new System.Windows.Forms.Timer(components);
+            timerEgg1 = new System.Windows.Forms.Timer(components);
+            timerEgg2 = new System.Windows.Forms.Timer(components);
+            Egg2 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)Basket).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)Egg).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)Bomb).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)Egg1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)Egg2).BeginInit();
             SuspendLayout();
             // 
             // Basket
@@ -47,27 +47,27 @@
             Basket.BackColor = Color.Transparent;
             Basket.BackgroundImageLayout = ImageLayout.None;
             Basket.Image = (Image)resources.GetObject("Basket.Image");
-            Basket.Location = new Point(456, 431);
+            Basket.Location = new Point(468, 446);
             Basket.Name = "Basket";
-            Basket.Size = new Size(158, 149);
+            Basket.Size = new Size(127, 120);
             Basket.SizeMode = PictureBoxSizeMode.StretchImage;
             Basket.TabIndex = 0;
             Basket.TabStop = false;
             Basket.Click += Basket_Click;
             // 
-            // Egg
+            // Egg1
             // 
-            Egg.AccessibleName = "Egg";
-            Egg.BackColor = Color.Transparent;
-            Egg.BackgroundImageLayout = ImageLayout.None;
-            Egg.Image = (Image)resources.GetObject("Egg.Image");
-            Egg.Location = new Point(692, 9);
-            Egg.Name = "Egg";
-            Egg.Size = new Size(86, 98);
-            Egg.SizeMode = PictureBoxSizeMode.StretchImage;
-            Egg.TabIndex = 1;
-            Egg.TabStop = false;
-            Egg.Click += Egg_Click;
+            Egg1.AccessibleName = "Egg";
+            Egg1.BackColor = Color.Transparent;
+            Egg1.BackgroundImageLayout = ImageLayout.None;
+            Egg1.Image = (Image)resources.GetObject("Egg1.Image");
+            Egg1.Location = new Point(550, 21);
+            Egg1.Name = "Egg1";
+            Egg1.Size = new Size(64, 76);
+            Egg1.SizeMode = PictureBoxSizeMode.StretchImage;
+            Egg1.TabIndex = 1;
+            Egg1.TabStop = false;
+            Egg1.Click += Egg_Click;
             // 
             // Points
             // 
@@ -95,40 +95,41 @@
             Health.Text = "Health: 3";
             Health.Click += Health_Click;
             // 
-            // timer1
+            // timerEgg1
             // 
-            timer1.Enabled = true;
-            timer1.Interval = 10;
-            timer1.Tick += timer1_Tick;
+            timerEgg1.Enabled = true;
+            timerEgg1.Interval = 10;
+            timerEgg1.Tick += timerEgg1_Tick;
             // 
-            // Bomb
+            // timerEgg2
             // 
-            Bomb.BackColor = Color.Transparent;
-            Bomb.BackgroundImageLayout = ImageLayout.None;
-            Bomb.Image = (Image)resources.GetObject("Bomb.Image");
-            Bomb.Location = new Point(225, 9);
-            Bomb.Name = "Bomb";
-            Bomb.Size = new Size(95, 112);
-            Bomb.SizeMode = PictureBoxSizeMode.StretchImage;
-            Bomb.TabIndex = 4;
-            Bomb.TabStop = false;
+            timerEgg2.Enabled = true;
+            timerEgg2.Interval = 20;
+            timerEgg2.Tick += timerEgg2_Tick;
             // 
-            // timer2
+            // Egg2
             // 
-            timer2.Enabled = true;
-            timer2.Interval = 20;
-            timer2.Tick += timer2_Tick;
+            Egg2.AccessibleName = "Egg2";
+            Egg2.BackColor = Color.Transparent;
+            Egg2.BackgroundImageLayout = ImageLayout.None;
+            Egg2.Image = (Image)resources.GetObject("Egg2.Image");
+            Egg2.Location = new Point(158, 93);
+            Egg2.Name = "Egg2";
+            Egg2.Size = new Size(64, 76);
+            Egg2.SizeMode = PictureBoxSizeMode.StretchImage;
+            Egg2.TabIndex = 5;
+            Egg2.TabStop = false;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Orange;
-            ClientSize = new Size(1084, 578);
-            Controls.Add(Bomb);
+            BackColor = Color.FromArgb(99, 149, 255);
+            ClientSize = new Size(1080, 564);
+            Controls.Add(Egg2);
             Controls.Add(Health);
             Controls.Add(Points);
-            Controls.Add(Egg);
+            Controls.Add(Egg1);
             Controls.Add(Basket);
             FormBorderStyle = FormBorderStyle.Fixed3D;
             MaximizeBox = false;
@@ -137,8 +138,8 @@
             Load += Form1_Load;
             KeyDown += Form1_KeyDown;
             ((System.ComponentModel.ISupportInitialize)Basket).EndInit();
-            ((System.ComponentModel.ISupportInitialize)Egg).EndInit();
-            ((System.ComponentModel.ISupportInitialize)Bomb).EndInit();
+            ((System.ComponentModel.ISupportInitialize)Egg1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)Egg2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -146,11 +147,11 @@
         #endregion
 
         private PictureBox Basket;
-        private PictureBox Egg;
+        private PictureBox Egg1;
         private Label Points;
         private Label Health;
-        private System.Windows.Forms.Timer timer1;
-        private PictureBox Bomb;
-        private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.Timer timerEgg1;
+        private System.Windows.Forms.Timer timerEgg2;
+        private PictureBox Egg2;
     }
 }
