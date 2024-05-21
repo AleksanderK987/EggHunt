@@ -61,7 +61,7 @@
             Egg1.BackColor = Color.Transparent;
             Egg1.BackgroundImageLayout = ImageLayout.None;
             Egg1.Image = (Image)resources.GetObject("Egg1.Image");
-            Egg1.Location = new Point(550, 21);
+            Egg1.Location = new Point(739, 46);
             Egg1.Name = "Egg1";
             Egg1.Size = new Size(64, 76);
             Egg1.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -74,7 +74,7 @@
             Points.AutoSize = true;
             Points.BackColor = Color.Transparent;
             Points.Font = new Font("Calibri", 32F, FontStyle.Bold, GraphicsUnit.Point);
-            Points.ForeColor = Color.LimeGreen;
+            Points.ForeColor = Color.Chartreuse;
             Points.Location = new Point(894, 9);
             Points.Name = "Points";
             Points.Size = new Size(178, 53);
@@ -113,7 +113,7 @@
             Egg2.BackColor = Color.Transparent;
             Egg2.BackgroundImageLayout = ImageLayout.None;
             Egg2.Image = (Image)resources.GetObject("Egg2.Image");
-            Egg2.Location = new Point(158, 93);
+            Egg2.Location = new Point(506, 9);
             Egg2.Name = "Egg2";
             Egg2.Size = new Size(64, 76);
             Egg2.SizeMode = PictureBoxSizeMode.StretchImage;
