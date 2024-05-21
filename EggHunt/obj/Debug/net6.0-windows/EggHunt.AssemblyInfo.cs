@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EggHunt")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+25b37d1cc389b43941845d6167b586002335d24a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+59bab300479332bc5c583867ce1e0be01b5ab435")]
 [assembly: System.Reflection.AssemblyProductAttribute("EggHunt")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EggHunt")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

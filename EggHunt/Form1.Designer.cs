@@ -75,7 +75,7 @@
             Points.BackColor = Color.Transparent;
             Points.Font = new Font("Calibri", 32F, FontStyle.Bold, GraphicsUnit.Point);
             Points.ForeColor = Color.Chartreuse;
-            Points.Location = new Point(894, 9);
+            Points.Location = new Point(12, 9);
             Points.Name = "Points";
             Points.Size = new Size(178, 53);
             Points.TabIndex = 2;
@@ -88,7 +88,7 @@
             Health.BackColor = Color.Transparent;
             Health.Font = new Font("Calibri", 32F, FontStyle.Bold, GraphicsUnit.Point);
             Health.ForeColor = Color.Red;
-            Health.Location = new Point(12, 9);
+            Health.Location = new Point(882, 9);
             Health.Name = "Health";
             Health.Size = new Size(186, 53);
             Health.TabIndex = 3;
